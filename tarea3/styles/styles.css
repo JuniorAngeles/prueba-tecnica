@@ -1,0 +1,93 @@
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  background: linear-gradient(135deg, #ff7e5f, #feb47b);
+}
+
+.container {
+  text-align: center;
+}
+
+.game-board {
+  display: grid;
+  grid-template-columns: repeat(4, 100px);
+  grid-gap: 15px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.card {
+  width: 100px;
+  height: 100px;
+  background-color: #444;
+  color: white;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.6s ease;
+  cursor: pointer;
+  transform: rotateY(180deg);
+}
+
+.card-inner {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+}
+
+.card.front {
+  background-color: #333;
+  color: transparent;
+}
+
+.card.back {
+  background-color: #444;
+  color: white;
+  transform: rotateY(0deg);
+}
+
+.card.flipped {
+  transform: rotateY(0deg);
+}
+
+.card.hidden {
+  color: transparent;
+}
+
+.card.matched {
+  background-color: #28a745;
+  cursor: default;
+}
+
+button {
+  background-color: #333;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #444;
+}
+
+.victory-message {
+  margin-top: 20px;
+  font-size: 1.5rem;
+  color: #28a745;
+}
+
+.hidden {
+  display: none;
+}
