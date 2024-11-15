@@ -110,7 +110,7 @@ button:hover {
 
 @media (max-width: 480px) {
   .game-board {
-    grid-template-columns: repeat(3, 60px);
+    grid-template-columns: repeat(4, 60px);
     grid-gap: 8px;
   }
 
