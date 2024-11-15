@@ -1,0 +1,118 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(45deg, orange, pink);
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  background-color: #fff;
+  width: 80%;
+  max-width: 800px;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  background-color: #333;
+  color: white;
+  padding: 10px;
+  border-radius: 8px 8px 0 0;
+}
+
+.dog-list-section {
+  padding: 20px;
+}
+
+.dog-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 15px;
+}
+
+.dog-card {
+  position: relative;
+  background-color: #444;
+  color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  text-align: center;
+}
+
+.dog-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.dog-card h3 {
+  margin: 10px 0;
+  font-size: 16px;
+  text-trasform: capitalize;
+}
+
+.breed-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  font-size: 14px;
+  text-align: center;
+}
+
+.breed-overlay ul {
+  list-style: none;
+}
+
+.breed-overlay li {
+  text-trasform: capitalize;
+}
+
+.dog-card:hover .breed-overlay {
+  opacity: 1;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.pagination button {
+  background-color: #444;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  margin: 0 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.pagination button.active {
+  background-color: #333;
+  font-weight: bold;
+}
+
+.pagination button:hover {
+  background-color: #555;
+}
